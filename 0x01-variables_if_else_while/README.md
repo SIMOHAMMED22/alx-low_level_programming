@@ -186,3 +186,28 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+Write a program that prints all possible combinations of single-digit numbers.
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int comb;
+
+	for (comb = '0'; comb <= '9'; comb++)
+	{
+		putchar(comb);
+		if (comb != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+
+	return (0);
+}
