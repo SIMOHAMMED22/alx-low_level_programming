@@ -1,12 +1,18 @@
 #include <stdio.h>
-
-int main(void) 
+#include <unistd.h>
+/**
+ * main - Entry Point
+ * Return:0 (Success)
+ */
+int main(void)
 {
-	char c = 'a';
-	while (c <= 'z') 
+	char alpha;
+
+	alpha = 'a';
+	while (alpha <= 'z')
 	{
-		putchar(c);
-		c++;
+		putchar(alpha);
+		alpha++;
 	}
 	putchar('\n');
 	return (0);
