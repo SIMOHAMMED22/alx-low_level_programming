@@ -52,3 +52,41 @@ int main(void)
 	}
 	return (0);
 }
+Write a program that prints the alphabet in lowercase, followed by a new line.
+#include <stdio.h>
+#include <unistd.h>
+/**
+ * main - Entry Point
+ * Return:0 (Success)
+ */
+int main(void)
+{
+	char alpha;
+
+	alpha = 'a';
+	while (alpha <= 'z')
+	{
+		putchar(alpha);
+		alpha++;
+	}
+	putchar('\n');
+	return (0);
+}
+Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+#include <stdio.h>
+#include <unistd.h>
+/**
+ * main - Entry Point
+ * Return:0 (Success)
+ */
+int main(void)
+{
+	char alpHA;
+
+	for (alpHA = 'a'; alpHA <= 'z'; alpHA++)
+		putchar(alpHA);
+	for (alpHA = 'A'; alpHA <= 'Z'; alpHA++)
+		putchar(alpHA);
+	putchar('\n');
+	return (0);
+}
