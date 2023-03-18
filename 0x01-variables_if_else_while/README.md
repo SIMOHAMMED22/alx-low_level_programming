@@ -148,3 +148,22 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+Write a program that prints the lowercase alphabet in reverse, followed by a new line.
+#include <stdio.h>
+/**
+ * main - Entry Point
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	char alpha;
+
+	alpha = 'z';
+	while (alpha >= 'a')
+	{
+		putchar(alpha);
+		alpha--;
+	}
+	putchar('\n');
+	return (0);
+}
