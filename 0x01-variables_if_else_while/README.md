@@ -112,3 +112,22 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+#include <unistd.h>
+#include <stdio.h>
+/**
+ * main - Entry Point
+ * Return:0 (Success)
+ */
+int main(void)
+{
+	int nbr;
+
+	for (nbr = 0; nbr <= 9; nbr++)
+	{
+		printf("%d", nbr);
+	}
+	putchar('\n');
+	return (0);
+
+}
