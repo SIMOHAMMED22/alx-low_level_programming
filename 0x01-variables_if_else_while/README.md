@@ -131,3 +131,20 @@ int main(void)
 	return (0);
 
 }
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+#include <stdio.h>
+/**
+ * main - Entry Point
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	int nbr;
+
+	for (nbr = 0; nbr < 10; nbr++)
+	{
+		putchar(nbr + '0');
+	}
+	putchar('\n');
+	return (0);
+}
