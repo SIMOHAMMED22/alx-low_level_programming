@@ -129,3 +129,21 @@ int print_sign(int n)
 	}
 	return (-1);
 }
+Write a function that computes the absolute value of an integer.
+#include "main.h"
+/**
+ * _abs - Entry Point
+ * @num: integer
+ * Return: 0 (Success)
+ */
+int _abs(int num)
+{
+	if (num < 0)
+	{
+		return (-num);
+	}
+	else
+	{
+		return (num);
+	}
+}
