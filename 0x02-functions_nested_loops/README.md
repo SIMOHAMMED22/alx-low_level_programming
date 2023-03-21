@@ -85,3 +85,21 @@ int _islower(int c)
 else
 	return (0);
 }
+Write a function that checks for alphabetic character.
+#include "main.h"
+/**
+ * _isalpha - Entry Point
+ * @c: - char
+ * Return: 0 (Success)
+ */
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+	return (1);
+	}
+	else
+	{
+	return (0);
+	}
+}
