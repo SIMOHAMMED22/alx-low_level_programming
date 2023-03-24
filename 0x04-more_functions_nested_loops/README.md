@@ -152,3 +152,38 @@ void print_line(int n)
 	}
 
 }
+Write a function that draws a diagonal line on the terminal.
+
+Prototype: void print_diagonal(int n);
+You can only use _putchar function to print
+Where n is the number of times the character \ should be printed
+The diagonal should end with a \n
+If n is 0 or less, the function should only print a \n
+#include "main.h"
+
+/**
+ * print_diagonal - Draws a diagonal lines according parameter
+ * @n: The number of times to print diagonal lines
+ * return: empty
+ */
+void print_diagonal(int n);
+{
+        int x, y;
+
+        if (n <= 0)
+        {
+        _putchar('\n');
+        }
+        else
+        {
+        for (y = 0; x < n; x++)
+        {
+        for (y = 0; y < x; y++)
+        {
+        _putchar(32);
+        }
+        _putchar(92);
+        -putchar('\n');
+        }
+        }
+}
