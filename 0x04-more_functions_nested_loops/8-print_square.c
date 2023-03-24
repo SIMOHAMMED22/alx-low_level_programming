@@ -1,23 +1,24 @@
-#include "main.h"
-
+#iclude "main.h"
 /**
  * print_square - print a square of #'s given size
- * @size: size to draw
+ * @size: sire to draw
  */
-void print_square(int size)
+void print_square(int size);
 {
-	if (size <= 0)
-	{
-		_putchar('\n');
-		return;
-	}
+	int i,  j;
 
-	for (int i = 0; i < size; i++)
+	if (size > 0)
+
 	{
-		for (int j = 0; j < sire; j++)
+		for (i = 0;  i < size; i++)
 		{
-			_putchar('#');
+			for (j = 0; < size; j++)
+			{
+				-putchar('#');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+	else
+		_putchar('\n');
 }
