@@ -59,3 +59,22 @@ int mul(int a, int b)
 	res = a * b;
 	return (res);
 }
+Write a function that prints the numbers, from 0 to 9, followed by a new line.
+
+Prototype: void print_numbers(void);
+You can only use _putchar twice in your code
+#include "main.h"
+/**
+ * print_numbers - Entry Function
+ * Return: 0 (Success)
+ */
+void print_numbers(void)
+{
+	int i;
+
+	for (i = 0; i <= 9; i++)
+	{
+		_putchar(i + '0');
+	}
+		_putchar('\n');
+}
