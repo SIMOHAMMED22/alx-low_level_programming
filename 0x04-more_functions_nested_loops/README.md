@@ -42,3 +42,20 @@ int _isdigit(int c)
 		return (0);
 	}
 }
+Write a function that multiplies two integers.
+
+Prototype: int mul(int a, int b);
+#include "main.h"
+/**
+ * mul - Entry Function
+ * @a: integer
+ * @b: integer
+ * Return: res (Success)
+ */
+int mul(int a, int b)
+{
+	int res;
+
+	res = a * b;
+	return (res);
+}
