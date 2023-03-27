@@ -256,3 +256,55 @@ char *_strcpy(char *dest, char *src)
 	dest[j] = '\0';
 	return (dest);
 }
+Write a function that convert a string to an integer.
+
+Prototype: int _atoi(char *s);
+The number in the string can be preceded by an infinite number of characters
+You need to take into account all the - and + signs before the number
+If there are no numbers in the string, the function must return 0
+You are not allowed to use long
+You are not allowed to declare new variables of “type” array
+You are not allowed to hard-code special values
+We will use the -fsanitize=signed-integer-overflow gcc flag to compile your code.
+FYI: The standard library provides a similar function: atoi. Run man atoi to learn more.
+
+#include "main.h"
+#include <stdio.h>
+/**
+ *_atoi - converts a string to an integer.
+ *@s: pointer to string.
+ *
+ *Return: integer gotten.
+ */
+int _atoi(char *s)
+{
+	int index, ind2;
+	unsigned int res;
+	int sign = 1;
+	char now;
+
+	index = 0;
+	res = 0;
+	while (*(s + index) != '\0')
+	{
+		now = *(s + index);
+		if (now == '-')
+		{
+			sign *= -1;
+		}
+		if (now >= '0' && now <= '9')
+		{
+			ind2 = index;
+			while (*(s + ind2) > 47 && *(s + ind2) < 58)
+			{
+				res = (res * 10) + *(s + ind2) - '0';
+				ind2++;
+			}
+			break;
+		}
+		index++;
+	}
+	if (sign < 0)
+		res *= sign;
+	return (res);
+}
