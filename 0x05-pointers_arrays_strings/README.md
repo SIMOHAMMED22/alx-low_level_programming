@@ -231,3 +231,28 @@ void print_array(int *a, int n)
 	}
 	printf("\n");
 }
+Prototype: char *_strcpy(char *dest, char *src);
+Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
+
+Return value: the pointer to dest
+FYI: The standard library provides a similar function: strcpy. Run man strcpy to learn more.
+
+#include "main.h"
+/**
+ *_strcpy - copy stringat the end of another string including \0.
+ *@dest: pointer to string to be copied to.
+ *@src: pointer to string to be copied.
+ *
+ *Return: pointer to dest.
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int j;
+
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[j] = src[j];
+	}
+	dest[j] = '\0';
+	return (dest);
+}
