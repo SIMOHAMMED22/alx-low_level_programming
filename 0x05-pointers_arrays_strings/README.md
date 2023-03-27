@@ -308,3 +308,34 @@ int _atoi(char *s)
 		res *= sign;
 	return (res);
 }
+
+Create a program that generates random valid passwords for the program 101-crackme.
+
+You are allowed to use the standard library
+You don’t have to pass the betty-style tests (you still need to pass the betty-doc tests)
+man srand, rand, time
+gdb and objdump can help
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ *main - generates random valid passwords
+ *Return: 0 (on success).
+ *
+ */
+int main(void)
+{
+	int pass, sum;
+
+	srand(time(NULL));
+	sum = 0;
+	while (sum <= 2645)
+	{
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
+	}
+	printf("%c", 2772 - sum);
+
+	return (0);
+}
