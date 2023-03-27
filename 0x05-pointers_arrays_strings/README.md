@@ -160,3 +160,44 @@ void puts2(char *str)
 	}
 	_putchar('\n');
 }
+Write a function that prints half of a string, followed by a new line.
+
+Prototype: void puts_half(char *str);
+The function should print the second half of the string
+If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
+#include "main.h"
+/**
+ *puts_half - prints half of a string.
+ *@str: pointer to string.
+ *
+ *Return: void.
+ */
+void puts_half(char *str)
+{
+	int n, length, mid;
+
+	length = 0;
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+
+	if (length % 2 == 0)
+	{
+		mid = length / 2;
+		for (n = mid; n < length; n++)
+		{
+			_putchar(str[n]);
+		}
+	}
+	else
+	{
+		mid = (length - 1) / 2;
+		for (n = mid + 1; n < length; n++)
+		{
+			_putchar(str[n]);
+		}
+	}
+	_putchar('\n');
+}
+
