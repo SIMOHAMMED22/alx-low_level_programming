@@ -30,3 +30,26 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
+Write a function that returns the length of a string.
+
+Prototype: int _strlen(char *s);
+FYI: The standard library provides a similar function: strlen. Run man strlen to learn more.
+#include "main.h"
+/**
+ *_strlen - finds and outputs length of string.
+ *@s: pointer to string.
+ *
+ *Return: length of a string.
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
