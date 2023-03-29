@@ -117,3 +117,28 @@ int _strcmp(char *s1, char *s2)
 
 	return (*s1 - *s2);
 }
+Write a function that reverses the content of an array of integers.
+
+Prototype: void reverse_array(int *a, int n);
+Where n is the number of elements of the array
+#include "main.h"
+
+/**
+ * reverse_array - Reverses the content of an array of integers.
+ * @a: The array of integers to be reversed.
+ * @n: The number of elements in the array.
+ *
+ * Return: Always 0
+ */
+
+void reverse_array(int *a, int n)
+{
+	int tmp, index;
+
+	for (index = n - 1; index >= n / 2; index--)
+	{
+		tmp = a[n - 1 - index];
+		a[n - 1 - index] = a[index];
+		a[index] = tmp;
+	}
+}
