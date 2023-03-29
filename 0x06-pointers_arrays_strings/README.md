@@ -91,4 +91,29 @@ char *_strncpy(char *dest, char *src, int n)
 
 	return (dest);
 }
+Write a function that compares two strings.
 
+Prototype: int _strcmp(char *s1, char *s2);
+Your function should work exactly like strcmp
+FYI: The standard library provides a similar function: strcmp. Run man strcmp to learn more.
+
+#include "main.h"
+
+/**
+ * _strcmp - Compares pointers to two strings.
+ * @s1: A pointer to the first string to be compared.
+ * @s2: A pointer to the second string to be compared.
+ *
+ * Return: Always 0
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+
+	return (*s1 - *s2);
+}
