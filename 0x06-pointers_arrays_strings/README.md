@@ -26,6 +26,7 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 
+
 Write a function that concatenates two strings.
 
 Prototype: char *_strncat(char *dest, char *src, int n);
@@ -141,4 +142,31 @@ void reverse_array(int *a, int n)
 		a[n - 1 - index] = a[index];
 		a[index] = tmp;
 	}
+}
+
+Write a function that changes all lowercase letters of a string to uppercase.
+
+Prototype: char *string_toupper(char *);
+
+#include "main.h"
+
+/**
+ * string_toupper - Changes all lowercase letters
+ * of a string to uppercase.
+ * @str: The string to be changed.
+ *
+ * Return: A pointer to the changed string.
+ */
+
+char *string_toupper(char *str)
+{
+	int index = 0;
+
+	while (str[index])
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+			str[index] -= 32;
+		index++;
+	}
+	return (str);
 }
