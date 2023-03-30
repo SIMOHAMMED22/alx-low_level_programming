@@ -213,3 +213,43 @@ char *cap_string(char *str)
 	}
 	return (str);
 }
+
+Write a function that encodes a string into 1337.
+
+Letters a and A should be replaced by 4
+Letters e and E should be replaced by 3
+Letters o and O should be replaced by 0
+Letters t and T should be replaced by 7
+Letters l and L should be replaced by 1
+Prototype: char *leet(char *);
+You can only use one if in your code
+You can only use two loops in your code
+You are not allowed to use switch
+You are not allowed to use any ternary operation
+
+#include "main.h"
+
+/**
+ * leet - Encodes a string to 1337.
+ * @str: The string to be encoded.
+ *
+ * Return: A pointer to the encoded string.
+ */
+
+char *leet(char *str)
+{
+	int indx1 = 0, indx2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+
+	while (str[indx1])
+	{
+		for (indx2 = 0; indx2 <= 7; indx2++)
+		{
+			if (str[indx1] == leet[indx2] ||
+					str[indx1] - 32 == leet[indx2])
+				str[indx1] = indx2 + '0';
+		}
+		indx1++;
+	}
+	return (str);
+}
