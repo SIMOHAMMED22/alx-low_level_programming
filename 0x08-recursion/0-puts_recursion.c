@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - Entry Function
- * @s: char
+ * @s: input
  * Return: Always 0 (Success)
  */
 void _puts_recursion(char *s)
