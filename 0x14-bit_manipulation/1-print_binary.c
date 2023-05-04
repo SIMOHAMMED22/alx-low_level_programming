@@ -6,20 +6,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-	int i;
+	int i, count = 0;
+	unsigned long int current;
 
-	while ((mask << 1) <= n)
-		mask <<= 1;
-
-
-	for (i = 0; mask > 0; mask >>= 1, i++)
+	for (i = 63; i >= 0; i--)
 	{
-		if (n & mask)
+		current = n >> i;
+
+		if (current & 1)
+		{
 			_putchar('1');
-		else
+			count++;
+		}
+		else if (count)
 			_putchar('0');
 	}
-
-	_putchar('\n');
+	if (!count)
+		_putchar('0');
 }
