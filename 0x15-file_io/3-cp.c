@@ -77,19 +77,27 @@ int main(int argc, char *argv[])
 		free(buffer);
 		exit(98);
 	}
-	do
-	{
+	do {
 		r = read(src, buffer, 1024);
 
 		if (r == -1)
 		{
 			dprintf(STDERR_FILENO,
-			"Error: Can't read from file %s\n", argv[1]);
+					"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
-	}
-	while (r > 0);
+
+		w = write(dst, buffer, r);
+		if (w == -1)
+		{
+			dprintf(STDERR_FILENO,
+					"Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+
+	} while (r > 0);
 
 	free(buffer);
 	close_file(src);
