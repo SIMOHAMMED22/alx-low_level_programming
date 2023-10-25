@@ -1,31 +1,4 @@
 CC = gcc
-SRC = main.c
-EXECUTABLE = school
-CFLAGS = -Wall -Wextra
-# Makefile for the 'school' executable
-
-# Compiler to be used
-CC = gcc
-
-# Source files (replace these with your .c files)
-SRC = main.c
-
-# Name of the executable
-EXECUTABLE = school
-
-# Compiler flags
-CFLAGS = -Wall -Wextra
-
-all: $(EXECUTABLE)
-
-$(EXECUTABLE): $(SRC)
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(SRC)
-
-clean:
-	rm -f $(EXECUTABLE)
-
-.PHONY: all clean
-CC = gcc
 SRC = main.c school.c
 all: $(SRC)
 	$(CC) $(SRC) -o school
