@@ -37,10 +37,3 @@ def island_perimeter(grid):
 
     return perimeter
 
-# Example usage:
-grid = [[0, 1, 0, 0],
-        [1, 1, 1, 0],
-        [0, 1, 0, 0],
-        [1, 1, 0, 0]]
-perimeter = island_perimeter(grid)
-print("Perimeter of the island:", perimeter)
